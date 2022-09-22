@@ -1,5 +1,6 @@
-from django.conf.urls.defaults import *
+from django.urls import path
+from . import views
 
-urlpatterns = patterns('hrajeme_si',
-    (r'^time/$', 'pokus.views.current_time'),
-)
+urlpatterns = [
+    path("", views.current_time),
+]
